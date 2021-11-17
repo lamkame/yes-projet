@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="public/assets/css/main.css"/>
+		<script src="https://kit.fontawesome.com/d3ad6a1d8f.js" crossorigin="anonymous"></script>
+		{% block head %}
+			<title>Mon Premier Site e_commerce</title>
+		{% endblock %}
+	</head>
+
+	<body>
+		<!--barre de navigation-->
+
+		<header>
+			<nav>
+				<h1>E-commerce</h1>
+				<div class="onglet">
+					<div id="menu">
+						<ul>
+							<li>
+								<a href="/articles">articles</a>
+								<ul>
+									<li><a href="#">art1</a></li>
+									<li><a href="#">art2</a></li>
+									<li><a href="#">art3</a></li>
+									<li><a href="#">art4</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">nouveautés</a>
+								<ul>
+									<li><a href="#">nvt1</a></li>
+									<li><a href="#">nvt2</a></li>
+									<li><a href="#">nvt3</a></li>
+									<li><a href="#">nvt4</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">cadeaux</a>
+								<ul>
+									<li><a href="#">cad1</a></li>
+									<li><a href="#">cad2</a></li>
+									<li><a href="#">cad3</a></li>
+									<li><a href="#">cad4</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<form>
+						<input type="searche" id="searche" value="" placeholder="recherche"/>
+					</form>
+					<p class="link">panier</p>
+					<p>
+						<i class="fas fa-shopping-cart"></i>
+					</p>
+				</div>
+			</nav>
+		</header>
+		<!--fin de barre de navigation-->
+
+		<!--partie principale-->
+		<main>
+			{% block main %}{% endblock %}
+		</main>
+		<footer>
+			<p>contactez-nous sur les social-media:</p>
+			<div class="social-media">
+				<p>
+					<i class="fab fa-twitter"></i>
+				</p>
+				<p>
+					<i class="fab fa-facebook"></i>
+				</p>
+				<p>
+					<i class="fab fa-whatsapp"></i>
+				</p>
+			</div>
+		</footer>
+	</body>
+
+</html>

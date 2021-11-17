@@ -1,0 +1,34 @@
+{% extends "layouts/main.twig" %}
+
+{% block head %}
+	<title>Mon premier site ecommerce</title>
+{% endblock %}
+
+{% block main %}
+	<section class="main">
+		<h1>Articles marocains</h1>
+		<div class="cards">
+			<div class="card">
+				<img src="public/assets/images/babouche berbère.jpg" alt=""/>
+				<div class="card-body">
+					<h4 class="babouche-title">babouche bèrbère</h4>
+					<h4 class="babouche-prix">29€99</h4>
+				</div>
+			</div>
+			<div class="card">
+				<img src="public/assets/images/cendrier.jpg" alt=""/>
+				<div class="card-body">
+					<h4 class="cendrier-tilte">cendrier traditionnelle</h4>
+					<h4 class="cendrier-prix">14€99</h4>
+				</div>
+			</div>
+			<div class="card">
+				<img src="public/assets/images/thière.jpg" alt=""/>
+				<div class="card-body">
+					<h4 class="thière-title">thière marocain</h4>
+					<h4 class="thière-prix">59€</h4>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

@@ -1,0 +1,39 @@
+RewriteEngine On
+
+# Deny access to .htaccess
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+# Deny access to .env
+<Files ~  "^\.env">
+Order allow,deny
+Deny from all
+</Files>
+
+# Deny access to composer.json
+<Files ~  "^composer.json">
+Order allow,deny
+Deny from all
+</Files>
+
+# Deny access to composer.lock
+<Files ~  "^composer.lock">
+Order allow,deny
+Deny from all
+</Files>
+
+Options -Indexes
+
+# Deny to folders
+RewriteRule (^|/)database(/|$) - [F]
+RewriteRule (^|/)src(/|$) - [F]
+RewriteRule (^|/)utils(/|$) - [F]
+RewriteRule (^|/)vendor(/|$) - [F]
+RewriteRule (^|/)views(/|$) - [F]
+
+# alto router routing
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [L]
